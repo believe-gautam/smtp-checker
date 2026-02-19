@@ -1,0 +1,4 @@
+khalof961@gmail.com | smtp.gmail.com:587 | TLS
+johnmessi6789965@gmail.com | smtp.gmail.com:587 | TLS
+johnmessi847662@gmail.com | smtp.gmail.com:587 | TLS
+fugkrhopi@gmail.com | smtp.gmail.com:587 | TLS
