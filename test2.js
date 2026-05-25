@@ -1,20 +1,50 @@
 import nodemailer from "nodemailer";
 
 const smtp = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 587,
-  secure: false,
-  auth: {
-    user: "khalof961@gmail.com",
-    pass: "vfdn kruo pkyi lsug".replace(/\s/g, ""),
-  },
+  // host: "mail.callvise.com",
+  //  port: 465,        // ✅ Secure SSL port
+  // secure: true,     // ✅ Must be true for port 465
+  // auth: {
+  //   user: "noreply@callvise.com",
+  //   pass: "rja*.AKK33T5"//.replace(/\s/g, ""),
+  // },
+
+    // host: "mail.mailerss.xyz",
+    // port: 587,
+    // secure: false, // TLS
+    // auth: {
+    //   user: "alex@mailerss.xyz",
+    //   pass: "SMT393$23329",
+    // },
+
+    /*
+    
+SERVER_EMAIL=no-reply@mypbxnumber.com
+SERVER_EMAIL_PASSWORD="Passc0de@123#"
+SERVER_HOST=mail.privateemail.com
+SERVER_PORT=465
+
+     */
+
+        host: "mail.privateemail.com",
+      port: 465,
+      secure: true, // TLS
+      auth: {
+        user: "no-reply@mypbxnumber.com",
+        pass: "Passc0de@123#",
+      },
+
+
+  
+
+
 });
 
 async function send() {
   await smtp.sendMail({
-    from: "khalof961@gmail.com",
+    from: "no-reply@mypbxnumber.com",
     to: "palgautam46@gmail.com",
-    subject: "SMTP test",
+    subject: "SMTP test CallVise",
     text: "Gmail SMTP working",
   });
 
@@ -22,3 +52,10 @@ async function send() {
 }
 
 send();
+
+
+
+// SERVER_EMAIL=noreply@callvise.com
+// SERVER_EMAIL_PASSWORD="Passc0de@123#"
+// SERVER_HOST=mail.callvise.com
+// SERVER_PORT=465
